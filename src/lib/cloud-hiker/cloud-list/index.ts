@@ -15,7 +15,7 @@ export const CloudList = (
   };
 
   /**
-   * Execute's strategy description here.
+   * List Cloud services.
    */
   const execute = async (inputs: PluginParams[]): Promise<PluginParams[]> => {
     return await Promise.all(

@@ -7,7 +7,7 @@ import {getVirtualMachines} from '../../core/azure';
 let credential: DefaultAzureCredential | null = null;
 
 /**
- * Execute's strategy description here.
+ * List Azure Services.
  */
 export const azureExecute = async (
   input: CloudListGlobalConfig & PluginParams
