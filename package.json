@@ -1,16 +1,16 @@
 {
-  "name": "if-plugin-template",
-  "description": "Impact Framework plugins template.",
+  "name": "cloud-hiker",
+  "description": "Impact Framework CloudHiker Plugin.",
   "version": "v0.1.0",
   "author": {
-    "name": "Green Software Foundation",
-    "email": "info@gsf.com"
-  },
-  "bugs": {
-    "url": "https://github.com/Green-Software-Foundation/if-plugin-template/issues/new?assignees=&labels=feedback&projects=&template=feedback.md&title=Feedback+-+"
+    "name": "Carlos Oliveira",
+    "email": "carlosdotoliveira@gmail.com"
   },
   "dependencies": {
-    "typescript": "^5.1.6"
+    "@azure/arm-compute": "^21.5.0",
+    "@azure/identity": "^4.0.1",
+    "typescript": "^5.1.6",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@babel/core": "7.22.10",
@@ -29,12 +29,11 @@
     "node": ">=18",
     "npm": ">=8"
   },
-  "homepage": "https://greensoftware.foundation",
   "keywords": [],
   "license": "MIT",
   "main": "build/index.js",
   "repository": {
-    "url": "https://github.com/Green-Software-Foundation/if-plugin-template.git"
+    "url": "https://github.com/elaiwon/cloud-hiker.git"
   },
   "scripts": {
     "build": "npm run clean && tsc --project tsconfig.build.json",
