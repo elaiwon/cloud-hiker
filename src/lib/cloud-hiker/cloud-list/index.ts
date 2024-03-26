@@ -4,7 +4,7 @@ import {
   CLOUD_VENDORS,
 } from '../../types/interface';
 import {CloudListGlobalConfig} from './types';
-import {CLOUD_SCHEMA} from './schema';
+import {CLOUD_SCHEMA} from '../core/schema';
 import {azureExecute} from './azure';
 
 export const CloudList = (

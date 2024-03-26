@@ -1,8 +1,8 @@
 import {DefaultAzureCredential} from '@azure/identity';
 import {AZURE_CLOUD_SERVICES, PluginParams} from '../../types/interface';
 import {CloudListGlobalConfig} from './types';
-import {AZURE_SCHEMA} from './schema';
-import {getVirtualMachines} from '../../core/azure';
+import {AZURE_SCHEMA} from '../core/schema';
+import {getVirtualMachineList} from '../core/azure';
 
 let credential: DefaultAzureCredential | null = null;
 
@@ -23,7 +23,7 @@ export const azureExecute = async (
 
     return await {
       ...input,
-      [listName]: await getVirtualMachines(input['azure/subscription-id']),
+      [listName]: await getVirtualMachineList(input['azure/subscription-id']),
     };
   }
 

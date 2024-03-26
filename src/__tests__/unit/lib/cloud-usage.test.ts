@@ -1,4 +1,4 @@
-import {CloudList} from '../../../lib/cloud-hiker/cloud-list';
+import {CloudUsage} from '../../../lib/cloud-hiker/cloud-usage';
 import azure from '../../../lib/cloud-hiker/core/azure';
 jest.mock('../../../lib/cloud-hiker/core/azure');
 
@@ -7,7 +7,7 @@ const mockedAzure = azure as jest.Mocked<typeof azure>;
 describe('lib/cloud-hiker/cloud-list: ', () => {
   describe('CloudList(): ', () => {
     it('has metadata field.', () => {
-      const pluginInstance = CloudList({});
+      const pluginInstance = CloudUsage({});
 
       expect(pluginInstance).toHaveProperty('metadata');
       expect(pluginInstance).toHaveProperty('execute');
@@ -17,30 +17,32 @@ describe('lib/cloud-hiker/cloud-list: ', () => {
 
     describe('execute(): ', () => {
       it('applies logic on provided inputs array.', async () => {
-        const pluginInstance = CloudList({});
+        const pluginInstance = CloudUsage({});
         const inputs = [
           {
             'azure/service': 'virtual-machine',
             'cloud/vendor': 'azure',
-            'azure/subscription-id': 'someSubscriptionId',
-          },
-        ];
-        const list = [
-          {
             'azure/resource-id':
               '/subscriptions/someSubscriptionId/resourceGroups/someResourceGroup/providers/Microsoft.Compute/virtualMachines/someName',
-            name: 'someName',
             'azure/instance-type': 'Standard_B2s',
+            'start-time': new Date('2024-03-15T09:00:00.000Z'),
+            'end-time': new Date('2024-03-15T20:00:00.000Z'),
+          },
+        ];
+        const usage = [
+          {
+            timestamp: '2024-03-15T09:00:00.000Z',
+            'cpu/utlization': 65.79406976744185,
           },
         ];
         const outputs = [
           {
             ...inputs[0],
-            'azure/virtual-machine-list': list,
+            ...usage[0],
           },
         ];
 
-        mockedAzure.getVirtualMachineList.mockResolvedValue(list);
+        mockedAzure.getVirtualMachineUsage.mockResolvedValue(usage);
         const response = await pluginInstance.execute(inputs, {});
         expect(response).toEqual(outputs);
       });
