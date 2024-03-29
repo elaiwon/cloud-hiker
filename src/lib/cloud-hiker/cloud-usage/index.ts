@@ -22,7 +22,7 @@ export const CloudUsage = (
 
     // Use only the first input
     const input = inputs[0];
-    const globalInput = Object.assign({}, globalConfig, input);
+    const globalInput = Object.assign({}, globalConfig || {}, input);
     const params = CLOUD_SCHEMA.parse(globalInput);
 
     if (params['cloud/vendor'] === CLOUD_VENDORS.AZURE) {

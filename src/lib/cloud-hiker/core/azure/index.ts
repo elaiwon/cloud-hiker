@@ -50,7 +50,8 @@ export const getVirtualMachineUsage = async (
   const data = response.metrics[0].timeseries[0].data?.map(d => {
     return {
       timestamp: d.timeStamp,
-      'cpu/utlization': d.average || 0,
+      duration: 3600,
+      'cpu/utilization': d.average || 0,
     };
   });
 

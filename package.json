@@ -16,6 +16,8 @@
   "devDependencies": {
     "@babel/core": "7.22.10",
     "@babel/preset-typescript": "^7.22.5",
+    "@cloud-carbon-footprint/azure": "^1.8.0",
+    "@cloud-carbon-footprint/core": "^0.17.3",
     "@jest/globals": "^29.6.1",
     "@types/jest": "^29.5.7",
     "@types/node": "^20.4.5",

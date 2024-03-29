@@ -3,12 +3,12 @@ import {
   PluginParams,
   CLOUD_VENDORS,
 } from '../../types/interface';
-import {CloudListGlobalConfig} from './types';
+import {CloudFootprintGlobalConfig} from './types';
 import {CLOUD_SCHEMA} from '../core/schema';
 import {azureExecute} from './azure';
 
-export const CloudList = (
-  globalConfig: CloudListGlobalConfig
+export const CloudFootprint = (
+  globalConfig: CloudFootprintGlobalConfig
 ): PluginInterface => {
   const metadata = {
     kind: 'execute',

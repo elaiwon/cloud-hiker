@@ -32,7 +32,7 @@ describe('lib/cloud-hiker/cloud-list: ', () => {
         const usage = [
           {
             timestamp: '2024-03-15T09:00:00.000Z',
-            'cpu/utlization': 65.79406976744185,
+            'cpu/utilization': 65.79406976744185,
           },
         ];
         const outputs = [

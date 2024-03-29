@@ -1,11 +1,12 @@
 import {z} from 'zod';
-
 import {
   CLOUD_VENDORS,
   AWS_CLOUD_SERVICES,
   AZURE_CLOUD_SERVICES,
   GCP_CLOUD_SERVICES,
 } from '../../types/interface';
+import {AZURE_VM_ENUM} from '../core/azure/virtual-machines';
+import {REGIONS} from './azure/regions';
 
 export const CLOUD_SCHEMA = z.object({
   'cloud/vendor': z.nativeEnum(CLOUD_VENDORS),
@@ -27,6 +28,23 @@ export const AZURE_SCHEMA = z.object({
 });
 
 export type AZURE_SCHEMA_TYPE = z.infer<typeof AZURE_SCHEMA>;
+
+const AZURE_VIRTUAL_MACHINE_SCHEMA = z.object({
+  'azure/service': z.enum([AZURE_CLOUD_SERVICES.VIRTUAL_MACHINE]),
+  'cloud/vendor': z.enum([CLOUD_VENDORS.AZURE]),
+  duration: z.number().gt(0),
+  'azure/instance-type': z.nativeEnum(AZURE_VM_ENUM),
+  'cpu/utilization': z.number().gte(0),
+  'azure/pue': z.number().gte(1),
+  'azure/region': z.nativeEnum(REGIONS),
+  'cpu/expected-lifespan': z.number().gt(0),
+});
+
+export const AZURE_SERVICE_SCHEMA = z.discriminatedUnion('azure/service', [
+  AZURE_VIRTUAL_MACHINE_SCHEMA,
+]);
+
+export type AZURE_SERVICE_SCHEMA_TYPE = z.infer<typeof AZURE_SERVICE_SCHEMA>;
 
 export const AZURE_RESOURCE_SCHEMA = z.object({
   'cloud/vendor': z.enum([CLOUD_VENDORS.AZURE]),
