@@ -73,7 +73,7 @@ const computeEmbodiedEmission = (input: PluginParams): number => {
 
   const scopeThreeEmissions = vm['embodied-co2e'];
 
-  return scopeThreeEmissions * (input.duration / input.expectedLifespan / 8760);
+  return (scopeThreeEmissions * input.duration) / input.expectedLifespan / 8760;
 };
 
 /**
@@ -101,7 +101,7 @@ export const azureExecute = async (
       pue: params['azure/pue'],
     });
 
-    output['cpu/co2e'] = computeEmission({
+    output['cpu/energy/co2e'] = computeEmission({
       energy: output['cpu/energy'],
       region: params['azure/region'],
     });
