@@ -33,6 +33,7 @@ const AZURE_VIRTUAL_MACHINE_SCHEMA = z.object({
   'azure/service': z.enum([AZURE_CLOUD_SERVICES.VIRTUAL_MACHINE]),
   'cloud/vendor': z.enum([CLOUD_VENDORS.AZURE]),
   duration: z.number().gt(0),
+  timestamp: z.date(),
   'azure/instance-type': z.nativeEnum(AZURE_VM_ENUM),
   'cpu/utilization': z.number().gte(0),
   'azure/pue': z.number().gte(1),
@@ -50,8 +51,11 @@ export const AZURE_RESOURCE_SCHEMA = z.object({
   'cloud/vendor': z.enum([CLOUD_VENDORS.AZURE]),
   'azure/service': z.nativeEnum(AZURE_CLOUD_SERVICES),
   'azure/resource-id': z.string(),
-  'azure/instance-type': z.string(),
-  'azure/granularity': z.string(),
+  'azure/granularity': z
+    .string()
+    .regex(
+      /P(?!$)(\d+Y){0,1}(\d+M){0,1}(\d+D){0,1}(T(\d+H){0,1}(\d+M){0,1}(\d+S){0,1}){0,1}/gm
+    ),
   'start-time': z.date(),
   'end-time': z.date(),
 });

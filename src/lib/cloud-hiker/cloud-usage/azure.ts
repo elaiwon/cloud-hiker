@@ -17,11 +17,17 @@ export const azureExecute = async (
   const params = AZURE_RESOURCE_SCHEMA.parse(config);
 
   if (params['azure/service'] === AZURE_CLOUD_SERVICES.VIRTUAL_MACHINE) {
-    const resourceId = input['azure/resource-id'];
-    const startTime = input['start-time'];
-    const endTime = input['end-time'];
+    const resourceId = params['azure/resource-id'];
+    const startTime = params['start-time'];
+    const endTime = params['end-time'];
+    const granularity = params['azure/granularity'];
 
-    return await getVirtualMachineUsage(resourceId, startTime, endTime);
+    return await getVirtualMachineUsage(
+      resourceId,
+      startTime,
+      endTime,
+      granularity
+    );
   }
 
   return [];

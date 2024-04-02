@@ -88,10 +88,15 @@ const client = new ComputeManagementClient(
 
         const tier = item.tier || '';
         const size = item.size || '';
-        const vCpusCapability = item.capabilities?.find(
+        const vCpusCapability = item.capabilities?.find(c => c.name === 'vCPUs')
+          ?.value;
+        const vCpus = vCpusCapability ? parseInt(vCpusCapability) : 0;
+        const vCpusAvailableCapability = item.capabilities?.find(
           c => c.name === 'vCPUsAvailable'
         )?.value;
-        const vCpus = vCpusCapability ? parseInt(vCpusCapability) : 0;
+        const vCpusAvailable = vCpusAvailableCapability
+          ? parseInt(vCpusAvailableCapability)
+          : 0;
         const memoryCapability = item.capabilities?.find(
           c => c.name === 'MemoryGB'
         )?.value;
@@ -105,14 +110,17 @@ const client = new ComputeManagementClient(
           3
         );
 
+        // For the power, we use the available vCPUs
+        // TODO: clarify if disabled vCpus are still consuming energy...
         data[family][name] = {
           tier,
           size,
           vCpus,
+          vCpusAvailable,
           memory,
           'embodied-co2e': co2e,
-          minWatts: minWatts * vCpus,
-          maxWatts: maxWatts * vCpus,
+          minWatts: minWatts * vCpusAvailable,
+          maxWatts: maxWatts * vCpusAvailable,
           co2eEmpty,
           wattsAveraged,
         };
@@ -127,6 +135,9 @@ const client = new ComputeManagementClient(
       return Math.max(acc, vCpus);
     }, 0);
 
+    // We use the vCpus instead of the vCpusAvailable as the understanding, based on the documentation
+    // is that the remaining processors are disabled, therefore not available for other VMs.
+    // TODO: clarify if this strategy makes sense
     Object.keys(data[fName]).forEach(item => {
       data[fName][item]['embodied-co2e'] *= data[fName][item].vCpus / maxVCpus;
     });

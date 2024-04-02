@@ -4174,9 +4174,9 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDDSV2FAMILY]: {
     [AZURE_VM_ENUM.STANDARD_DS11_1_V2]: {
       size: 'DS11-1_v2',
-      vCPU: 1,
+      vCPU: 2,
       memory: 14,
-      'embodied-co2e': 57.5,
+      'embodied-co2e': 115,
       minWatts: 0.8472112937370536,
       maxWatts: 3.6932690801900083,
       co2eEmpty: false,
@@ -4194,9 +4194,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_DS12_1_V2]: {
       size: 'DS12-1_v2',
-      vCPU: 1,
+      vCPU: 4,
       memory: 28,
-      'embodied-co2e': 58.333000000000006,
+      'embodied-co2e': 233.33200000000002,
       minWatts: 0.8472112937370536,
       maxWatts: 3.6932690801900083,
       co2eEmpty: false,
@@ -4204,9 +4204,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_DS12_2_V2]: {
       size: 'DS12-2_v2',
-      vCPU: 2,
+      vCPU: 4,
       memory: 28,
-      'embodied-co2e': 116.66600000000001,
+      'embodied-co2e': 233.33200000000002,
       minWatts: 1.6944225874741072,
       maxWatts: 7.386538160380017,
       co2eEmpty: false,
@@ -4224,9 +4224,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_DS13_2_V2]: {
       size: 'DS13-2_v2',
-      vCPU: 2,
+      vCPU: 8,
       memory: 56,
-      'embodied-co2e': 120.552,
+      'embodied-co2e': 482.208,
       minWatts: 1.6944225874741072,
       maxWatts: 7.386538160380017,
       co2eEmpty: false,
@@ -4234,9 +4234,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_DS13_4_V2]: {
       size: 'DS13-4_v2',
-      vCPU: 4,
+      vCPU: 8,
       memory: 56,
-      'embodied-co2e': 241.104,
+      'embodied-co2e': 482.208,
       minWatts: 3.3888451749482145,
       maxWatts: 14.773076320760033,
       co2eEmpty: false,
@@ -4254,9 +4254,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_DS14_4_V2]: {
       size: 'DS14-4_v2',
-      vCPU: 4,
+      vCPU: 16,
       memory: 112,
-      'embodied-co2e': 256.65000000000003,
+      'embodied-co2e': 1026.6000000000001,
       minWatts: 3.3888451749482145,
       maxWatts: 14.773076320760033,
       co2eEmpty: false,
@@ -4264,9 +4264,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_DS14_8_V2]: {
       size: 'DS14-8_v2',
-      vCPU: 8,
+      vCPU: 16,
       memory: 112,
-      'embodied-co2e': 513.3000000000001,
+      'embodied-co2e': 1026.6000000000001,
       minWatts: 6.777690349896429,
       maxWatts: 29.546152641520067,
       co2eEmpty: false,
@@ -4524,7 +4524,7 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDEADSV5FAMILY]: {
     [AZURE_VM_ENUM.STANDARD_E16_4ADS_V5]: {
       size: 'E16-4ads_v5',
-      vCPU: 4,
+      vCPU: 16,
       memory: 128,
       'embodied-co2e': 0,
       minWatts: 3.3888451749482145,
@@ -4534,7 +4534,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E16_8ADS_V5]: {
       size: 'E16-8ads_v5',
-      vCPU: 8,
+      vCPU: 16,
       memory: 128,
       'embodied-co2e': 0,
       minWatts: 6.777690349896429,
@@ -4574,7 +4574,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_16ADS_V5]: {
       size: 'E32-16ads_v5',
-      vCPU: 16,
+      vCPU: 32,
       memory: 256,
       'embodied-co2e': 0,
       minWatts: 13.555380699792858,
@@ -4584,7 +4584,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_8ADS_V5]: {
       size: 'E32-8ads_v5',
-      vCPU: 8,
+      vCPU: 32,
       memory: 256,
       'embodied-co2e': 0,
       minWatts: 6.777690349896429,
@@ -4604,7 +4604,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E4_2ADS_V5]: {
       size: 'E4-2ads_v5',
-      vCPU: 2,
+      vCPU: 4,
       memory: 32,
       'embodied-co2e': 0,
       minWatts: 1.6944225874741072,
@@ -4634,7 +4634,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_16ADS_V5]: {
       size: 'E64-16ads_v5',
-      vCPU: 16,
+      vCPU: 64,
       memory: 512,
       'embodied-co2e': 0,
       minWatts: 13.555380699792858,
@@ -4644,7 +4644,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_32ADS_V5]: {
       size: 'E64-32ads_v5',
-      vCPU: 32,
+      vCPU: 64,
       memory: 512,
       'embodied-co2e': 0,
       minWatts: 27.110761399585716,
@@ -4664,7 +4664,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_2ADS_V5]: {
       size: 'E8-2ads_v5',
-      vCPU: 2,
+      vCPU: 8,
       memory: 64,
       'embodied-co2e': 0,
       minWatts: 1.6944225874741072,
@@ -4674,7 +4674,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_4ADS_V5]: {
       size: 'E8-4ads_v5',
-      vCPU: 4,
+      vCPU: 8,
       memory: 64,
       'embodied-co2e': 0,
       minWatts: 3.3888451749482145,
@@ -4694,7 +4694,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E96_24ADS_V5]: {
       size: 'E96-24ads_v5',
-      vCPU: 24,
+      vCPU: 96,
       memory: 672,
       'embodied-co2e': 0,
       minWatts: 20.333071049689288,
@@ -4704,7 +4704,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E96_48ADS_V5]: {
       size: 'E96-48ads_v5',
-      vCPU: 48,
+      vCPU: 96,
       memory: 672,
       'embodied-co2e': 0,
       minWatts: 40.666142099378575,
@@ -4726,9 +4726,9 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDEASV4FAMILY]: {
     [AZURE_VM_ENUM.STANDARD_E16_4AS_V4]: {
       size: 'E16-4as_v4',
-      vCPU: 4,
+      vCPU: 16,
       memory: 128,
-      'embodied-co2e': 54.39416666666666,
+      'embodied-co2e': 217.57666666666665,
       minWatts: 3.3888451749482145,
       maxWatts: 14.773076320760033,
       co2eEmpty: false,
@@ -4736,9 +4736,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E16_8AS_V4]: {
       size: 'E16-8as_v4',
-      vCPU: 8,
+      vCPU: 16,
       memory: 128,
-      'embodied-co2e': 108.78833333333333,
+      'embodied-co2e': 217.57666666666665,
       minWatts: 6.777690349896429,
       maxWatts: 29.546152641520067,
       co2eEmpty: false,
@@ -4776,9 +4776,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_16AS_V4]: {
       size: 'E32-16as_v4',
-      vCPU: 16,
+      vCPU: 32,
       memory: 256,
-      'embodied-co2e': 247.18666666666664,
+      'embodied-co2e': 494.3733333333333,
       minWatts: 13.555380699792858,
       maxWatts: 59.09230528304013,
       co2eEmpty: false,
@@ -4786,9 +4786,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_8AS_V4]: {
       size: 'E32-8as_v4',
-      vCPU: 8,
+      vCPU: 32,
       memory: 256,
-      'embodied-co2e': 123.59333333333332,
+      'embodied-co2e': 494.3733333333333,
       minWatts: 6.777690349896429,
       maxWatts: 29.546152641520067,
       co2eEmpty: false,
@@ -4806,9 +4806,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E4_2AS_V4]: {
       size: 'E4-2as_v4',
-      vCPU: 2,
+      vCPU: 4,
       memory: 32,
-      'embodied-co2e': 24.421041666666667,
+      'embodied-co2e': 48.842083333333335,
       minWatts: 1.6944225874741072,
       maxWatts: 7.386538160380017,
       co2eEmpty: false,
@@ -4836,9 +4836,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_16AS_V4]: {
       size: 'E64-16as_v4',
-      vCPU: 16,
+      vCPU: 64,
       memory: 512,
-      'embodied-co2e': 306.40999999999997,
+      'embodied-co2e': 1225.6399999999999,
       minWatts: 13.555380699792858,
       maxWatts: 59.09230528304013,
       co2eEmpty: false,
@@ -4846,9 +4846,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_32AS_V4]: {
       size: 'E64-32as_v4',
-      vCPU: 32,
+      vCPU: 64,
       memory: 512,
-      'embodied-co2e': 612.8199999999999,
+      'embodied-co2e': 1225.6399999999999,
       minWatts: 27.110761399585716,
       maxWatts: 118.18461056608027,
       co2eEmpty: false,
@@ -4866,9 +4866,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_2AS_V4]: {
       size: 'E8-2as_v4',
-      vCPU: 2,
+      vCPU: 8,
       memory: 64,
-      'embodied-co2e': 25.346249999999998,
+      'embodied-co2e': 101.38499999999999,
       minWatts: 1.6944225874741072,
       maxWatts: 7.386538160380017,
       co2eEmpty: false,
@@ -4876,9 +4876,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_4AS_V4]: {
       size: 'E8-4as_v4',
-      vCPU: 4,
+      vCPU: 8,
       memory: 64,
-      'embodied-co2e': 50.692499999999995,
+      'embodied-co2e': 101.38499999999999,
       minWatts: 3.3888451749482145,
       maxWatts: 14.773076320760033,
       co2eEmpty: false,
@@ -4896,9 +4896,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E96_24AS_V4]: {
       size: 'E96-24as_v4',
-      vCPU: 24,
+      vCPU: 96,
       memory: 672,
-      'embodied-co2e': 515.135,
+      'embodied-co2e': 2060.54,
       minWatts: 20.333071049689288,
       maxWatts: 88.6384579245602,
       co2eEmpty: false,
@@ -4906,9 +4906,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E96_48AS_V4]: {
       size: 'E96-48as_v4',
-      vCPU: 48,
+      vCPU: 96,
       memory: 672,
-      'embodied-co2e': 1030.27,
+      'embodied-co2e': 2060.54,
       minWatts: 40.666142099378575,
       maxWatts: 177.2769158491204,
       co2eEmpty: false,
@@ -4928,7 +4928,7 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDEASV5FAMILY]: {
     [AZURE_VM_ENUM.STANDARD_E16_4AS_V5]: {
       size: 'E16-4as_v5',
-      vCPU: 4,
+      vCPU: 16,
       memory: 128,
       'embodied-co2e': 0,
       minWatts: 3.3888451749482145,
@@ -4938,7 +4938,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E16_8AS_V5]: {
       size: 'E16-8as_v5',
-      vCPU: 8,
+      vCPU: 16,
       memory: 128,
       'embodied-co2e': 0,
       minWatts: 6.777690349896429,
@@ -4978,7 +4978,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_16AS_V5]: {
       size: 'E32-16as_v5',
-      vCPU: 16,
+      vCPU: 32,
       memory: 256,
       'embodied-co2e': 0,
       minWatts: 13.555380699792858,
@@ -4988,7 +4988,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_8AS_V5]: {
       size: 'E32-8as_v5',
-      vCPU: 8,
+      vCPU: 32,
       memory: 256,
       'embodied-co2e': 0,
       minWatts: 6.777690349896429,
@@ -5008,7 +5008,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E4_2AS_V5]: {
       size: 'E4-2as_v5',
-      vCPU: 2,
+      vCPU: 4,
       memory: 32,
       'embodied-co2e': 0,
       minWatts: 1.6944225874741072,
@@ -5038,7 +5038,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_16AS_V5]: {
       size: 'E64-16as_v5',
-      vCPU: 16,
+      vCPU: 64,
       memory: 512,
       'embodied-co2e': 0,
       minWatts: 13.555380699792858,
@@ -5048,7 +5048,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_32AS_V5]: {
       size: 'E64-32as_v5',
-      vCPU: 32,
+      vCPU: 64,
       memory: 512,
       'embodied-co2e': 0,
       minWatts: 27.110761399585716,
@@ -5068,7 +5068,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_2AS_V5]: {
       size: 'E8-2as_v5',
-      vCPU: 2,
+      vCPU: 8,
       memory: 64,
       'embodied-co2e': 0,
       minWatts: 1.6944225874741072,
@@ -5078,7 +5078,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_4AS_V5]: {
       size: 'E8-4as_v5',
-      vCPU: 4,
+      vCPU: 8,
       memory: 64,
       'embodied-co2e': 0,
       minWatts: 3.3888451749482145,
@@ -5098,7 +5098,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E96_24AS_V5]: {
       size: 'E96-24as_v5',
-      vCPU: 24,
+      vCPU: 96,
       memory: 672,
       'embodied-co2e': 0,
       minWatts: 20.333071049689288,
@@ -5108,7 +5108,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E96_48AS_V5]: {
       size: 'E96-48as_v5',
-      vCPU: 48,
+      vCPU: 96,
       memory: 672,
       'embodied-co2e': 0,
       minWatts: 40.666142099378575,
@@ -5130,9 +5130,9 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDEDSV4FAMILY]: {
     [AZURE_VM_ENUM.STANDARD_E16_4DS_V4]: {
       size: 'E16-4ds_v4',
-      vCPU: 4,
+      vCPU: 16,
       memory: 128,
-      'embodied-co2e': 81.59125,
+      'embodied-co2e': 326.365,
       minWatts: 3.3888451749482145,
       maxWatts: 14.773076320760033,
       co2eEmpty: false,
@@ -5140,9 +5140,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E16_8DS_V4]: {
       size: 'E16-8ds_v4',
-      vCPU: 8,
+      vCPU: 16,
       memory: 128,
-      'embodied-co2e': 163.1825,
+      'embodied-co2e': 326.365,
       minWatts: 6.777690349896429,
       maxWatts: 29.546152641520067,
       co2eEmpty: false,
@@ -5180,9 +5180,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_16DS_V4]: {
       size: 'E32-16ds_v4',
-      vCPU: 16,
+      vCPU: 32,
       memory: 256,
-      'embodied-co2e': 370.78,
+      'embodied-co2e': 741.56,
       minWatts: 13.555380699792858,
       maxWatts: 59.09230528304013,
       co2eEmpty: false,
@@ -5190,9 +5190,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_8DS_V4]: {
       size: 'E32-8ds_v4',
-      vCPU: 8,
+      vCPU: 32,
       memory: 256,
-      'embodied-co2e': 185.39,
+      'embodied-co2e': 741.56,
       minWatts: 6.777690349896429,
       maxWatts: 29.546152641520067,
       co2eEmpty: false,
@@ -5210,9 +5210,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E4_2DS_V4]: {
       size: 'E4-2ds_v4',
-      vCPU: 2,
+      vCPU: 4,
       memory: 32,
-      'embodied-co2e': 36.6315625,
+      'embodied-co2e': 73.263125,
       minWatts: 1.6944225874741072,
       maxWatts: 7.386538160380017,
       co2eEmpty: false,
@@ -5240,9 +5240,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_16DS_V4]: {
       size: 'E64-16ds_v4',
-      vCPU: 16,
+      vCPU: 64,
       memory: 504,
-      'embodied-co2e': 456.8375,
+      'embodied-co2e': 1827.35,
       minWatts: 13.555380699792858,
       maxWatts: 59.09230528304013,
       co2eEmpty: false,
@@ -5250,9 +5250,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_32DS_V4]: {
       size: 'E64-32ds_v4',
-      vCPU: 32,
+      vCPU: 64,
       memory: 504,
-      'embodied-co2e': 913.675,
+      'embodied-co2e': 1827.35,
       minWatts: 27.110761399585716,
       maxWatts: 118.18461056608027,
       co2eEmpty: false,
@@ -5270,9 +5270,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_2DS_V4]: {
       size: 'E8-2ds_v4',
-      vCPU: 2,
+      vCPU: 8,
       memory: 64,
-      'embodied-co2e': 38.019375,
+      'embodied-co2e': 152.0775,
       minWatts: 1.6944225874741072,
       maxWatts: 7.386538160380017,
       co2eEmpty: false,
@@ -5280,9 +5280,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_4DS_V4]: {
       size: 'E8-4ds_v4',
-      vCPU: 4,
+      vCPU: 8,
       memory: 64,
-      'embodied-co2e': 76.03875,
+      'embodied-co2e': 152.0775,
       minWatts: 3.3888451749482145,
       maxWatts: 14.773076320760033,
       co2eEmpty: false,
@@ -5302,7 +5302,7 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDEDSV5FAMILY]: {
     [AZURE_VM_ENUM.STANDARD_E16_4DS_V5]: {
       size: 'E16-4ds_v5',
-      vCPU: 4,
+      vCPU: 16,
       memory: 128,
       'embodied-co2e': 0,
       minWatts: 3.3888451749482145,
@@ -5312,7 +5312,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E16_8DS_V5]: {
       size: 'E16-8ds_v5',
-      vCPU: 8,
+      vCPU: 16,
       memory: 128,
       'embodied-co2e': 0,
       minWatts: 6.777690349896429,
@@ -5352,7 +5352,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_16DS_V5]: {
       size: 'E32-16ds_v5',
-      vCPU: 16,
+      vCPU: 32,
       memory: 256,
       'embodied-co2e': 0,
       minWatts: 13.555380699792858,
@@ -5362,7 +5362,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_8DS_V5]: {
       size: 'E32-8ds_v5',
-      vCPU: 8,
+      vCPU: 32,
       memory: 256,
       'embodied-co2e': 0,
       minWatts: 6.777690349896429,
@@ -5382,7 +5382,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E4_2DS_V5]: {
       size: 'E4-2ds_v5',
-      vCPU: 2,
+      vCPU: 4,
       memory: 32,
       'embodied-co2e': 0,
       minWatts: 1.6944225874741072,
@@ -5412,7 +5412,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_16DS_V5]: {
       size: 'E64-16ds_v5',
-      vCPU: 16,
+      vCPU: 64,
       memory: 512,
       'embodied-co2e': 0,
       minWatts: 13.555380699792858,
@@ -5422,7 +5422,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_32DS_V5]: {
       size: 'E64-32ds_v5',
-      vCPU: 32,
+      vCPU: 64,
       memory: 512,
       'embodied-co2e': 0,
       minWatts: 27.110761399585716,
@@ -5442,7 +5442,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_2DS_V5]: {
       size: 'E8-2ds_v5',
-      vCPU: 2,
+      vCPU: 8,
       memory: 64,
       'embodied-co2e': 0,
       minWatts: 1.6944225874741072,
@@ -5452,7 +5452,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_4DS_V5]: {
       size: 'E8-4ds_v5',
-      vCPU: 4,
+      vCPU: 8,
       memory: 64,
       'embodied-co2e': 0,
       minWatts: 3.3888451749482145,
@@ -5472,7 +5472,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E96_24DS_V5]: {
       size: 'E96-24ds_v5',
-      vCPU: 24,
+      vCPU: 96,
       memory: 672,
       'embodied-co2e': 0,
       minWatts: 20.333071049689288,
@@ -5482,7 +5482,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E96_48DS_V5]: {
       size: 'E96-48ds_v5',
-      vCPU: 48,
+      vCPU: 96,
       memory: 672,
       'embodied-co2e': 0,
       minWatts: 40.666142099378575,
@@ -5504,9 +5504,9 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDESV3FAMILY]: {
     [AZURE_VM_ENUM.STANDARD_E16_4S_V3]: {
       size: 'E16-4s_v3',
-      vCPU: 4,
+      vCPU: 16,
       memory: 128,
-      'embodied-co2e': 81.59125,
+      'embodied-co2e': 326.365,
       minWatts: 3.3888451749482145,
       maxWatts: 14.773076320760033,
       co2eEmpty: false,
@@ -5514,9 +5514,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E16_8S_V3]: {
       size: 'E16-8s_v3',
-      vCPU: 8,
+      vCPU: 16,
       memory: 128,
-      'embodied-co2e': 163.1825,
+      'embodied-co2e': 326.365,
       minWatts: 6.777690349896429,
       maxWatts: 29.546152641520067,
       co2eEmpty: false,
@@ -5554,9 +5554,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_16S_V3]: {
       size: 'E32-16s_v3',
-      vCPU: 16,
+      vCPU: 32,
       memory: 256,
-      'embodied-co2e': 370.78,
+      'embodied-co2e': 741.56,
       minWatts: 13.555380699792858,
       maxWatts: 59.09230528304013,
       co2eEmpty: false,
@@ -5564,9 +5564,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_8S_V3]: {
       size: 'E32-8s_v3',
-      vCPU: 8,
+      vCPU: 32,
       memory: 256,
-      'embodied-co2e': 185.39,
+      'embodied-co2e': 741.56,
       minWatts: 6.777690349896429,
       maxWatts: 29.546152641520067,
       co2eEmpty: false,
@@ -5584,9 +5584,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E4_2S_V3]: {
       size: 'E4-2s_v3',
-      vCPU: 2,
+      vCPU: 4,
       memory: 32,
-      'embodied-co2e': 36.6315625,
+      'embodied-co2e': 73.263125,
       minWatts: 1.6944225874741072,
       maxWatts: 7.386538160380017,
       co2eEmpty: false,
@@ -5614,9 +5614,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_16S_V3]: {
       size: 'E64-16s_v3',
-      vCPU: 16,
+      vCPU: 64,
       memory: 432,
-      'embodied-co2e': 431.855,
+      'embodied-co2e': 1727.42,
       minWatts: 13.555380699792858,
       maxWatts: 59.09230528304013,
       co2eEmpty: false,
@@ -5624,9 +5624,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_32S_V3]: {
       size: 'E64-32s_v3',
-      vCPU: 32,
+      vCPU: 64,
       memory: 432,
-      'embodied-co2e': 863.71,
+      'embodied-co2e': 1727.42,
       minWatts: 27.110761399585716,
       maxWatts: 118.18461056608027,
       co2eEmpty: false,
@@ -5644,9 +5644,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_2S_V3]: {
       size: 'E8-2s_v3',
-      vCPU: 2,
+      vCPU: 8,
       memory: 64,
-      'embodied-co2e': 38.019375,
+      'embodied-co2e': 152.0775,
       minWatts: 1.6944225874741072,
       maxWatts: 7.386538160380017,
       co2eEmpty: false,
@@ -5654,9 +5654,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_4S_V3]: {
       size: 'E8-4s_v3',
-      vCPU: 4,
+      vCPU: 8,
       memory: 64,
-      'embodied-co2e': 76.03875,
+      'embodied-co2e': 152.0775,
       minWatts: 3.3888451749482145,
       maxWatts: 14.773076320760033,
       co2eEmpty: false,
@@ -5676,9 +5676,9 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDESV4FAMILY]: {
     [AZURE_VM_ENUM.STANDARD_E16_4S_V4]: {
       size: 'E16-4s_v4',
-      vCPU: 4,
+      vCPU: 16,
       memory: 128,
-      'embodied-co2e': 78.46625,
+      'embodied-co2e': 313.865,
       minWatts: 3.3888451749482145,
       maxWatts: 14.773076320760033,
       co2eEmpty: false,
@@ -5686,9 +5686,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E16_8S_V4]: {
       size: 'E16-8s_v4',
-      vCPU: 8,
+      vCPU: 16,
       memory: 128,
-      'embodied-co2e': 156.9325,
+      'embodied-co2e': 313.865,
       minWatts: 6.777690349896429,
       maxWatts: 29.546152641520067,
       co2eEmpty: false,
@@ -5726,9 +5726,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_16S_V4]: {
       size: 'E32-16s_v4',
-      vCPU: 16,
+      vCPU: 32,
       memory: 256,
-      'embodied-co2e': 358.28,
+      'embodied-co2e': 716.56,
       minWatts: 13.555380699792858,
       maxWatts: 59.09230528304013,
       co2eEmpty: false,
@@ -5736,9 +5736,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_8S_V4]: {
       size: 'E32-8s_v4',
-      vCPU: 8,
+      vCPU: 32,
       memory: 256,
-      'embodied-co2e': 179.14,
+      'embodied-co2e': 716.56,
       minWatts: 6.777690349896429,
       maxWatts: 29.546152641520067,
       co2eEmpty: false,
@@ -5756,9 +5756,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E4_2S_V4]: {
       size: 'E4-2s_v4',
-      vCPU: 2,
+      vCPU: 4,
       memory: 32,
-      'embodied-co2e': 35.0690625,
+      'embodied-co2e': 70.138125,
       minWatts: 1.6944225874741072,
       maxWatts: 7.386538160380017,
       co2eEmpty: false,
@@ -5786,9 +5786,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_16S_V4]: {
       size: 'E64-16s_v4',
-      vCPU: 16,
+      vCPU: 64,
       memory: 504,
-      'embodied-co2e': 444.3375,
+      'embodied-co2e': 1777.35,
       minWatts: 13.555380699792858,
       maxWatts: 59.09230528304013,
       co2eEmpty: false,
@@ -5796,9 +5796,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_32S_V4]: {
       size: 'E64-32s_v4',
-      vCPU: 32,
+      vCPU: 64,
       memory: 504,
-      'embodied-co2e': 888.675,
+      'embodied-co2e': 1777.35,
       minWatts: 27.110761399585716,
       maxWatts: 118.18461056608027,
       co2eEmpty: false,
@@ -5816,9 +5816,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_2S_V4]: {
       size: 'E8-2s_v4',
-      vCPU: 2,
+      vCPU: 8,
       memory: 64,
-      'embodied-co2e': 36.456875,
+      'embodied-co2e': 145.8275,
       minWatts: 1.6944225874741072,
       maxWatts: 7.386538160380017,
       co2eEmpty: false,
@@ -5826,9 +5826,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_4S_V4]: {
       size: 'E8-4s_v4',
-      vCPU: 4,
+      vCPU: 8,
       memory: 64,
-      'embodied-co2e': 72.91375,
+      'embodied-co2e': 145.8275,
       minWatts: 3.3888451749482145,
       maxWatts: 14.773076320760033,
       co2eEmpty: false,
@@ -5848,7 +5848,7 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDESV5FAMILY]: {
     [AZURE_VM_ENUM.STANDARD_E16_4S_V5]: {
       size: 'E16-4s_v5',
-      vCPU: 4,
+      vCPU: 16,
       memory: 128,
       'embodied-co2e': 0,
       minWatts: 3.3888451749482145,
@@ -5858,7 +5858,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E16_8S_V5]: {
       size: 'E16-8s_v5',
-      vCPU: 8,
+      vCPU: 16,
       memory: 128,
       'embodied-co2e': 0,
       minWatts: 6.777690349896429,
@@ -5898,7 +5898,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_16S_V5]: {
       size: 'E32-16s_v5',
-      vCPU: 16,
+      vCPU: 32,
       memory: 256,
       'embodied-co2e': 0,
       minWatts: 13.555380699792858,
@@ -5908,7 +5908,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E32_8S_V5]: {
       size: 'E32-8s_v5',
-      vCPU: 8,
+      vCPU: 32,
       memory: 256,
       'embodied-co2e': 0,
       minWatts: 6.777690349896429,
@@ -5928,7 +5928,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E4_2S_V5]: {
       size: 'E4-2s_v5',
-      vCPU: 2,
+      vCPU: 4,
       memory: 32,
       'embodied-co2e': 0,
       minWatts: 1.6944225874741072,
@@ -5958,7 +5958,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_16S_V5]: {
       size: 'E64-16s_v5',
-      vCPU: 16,
+      vCPU: 64,
       memory: 512,
       'embodied-co2e': 0,
       minWatts: 13.555380699792858,
@@ -5968,7 +5968,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E64_32S_V5]: {
       size: 'E64-32s_v5',
-      vCPU: 32,
+      vCPU: 64,
       memory: 512,
       'embodied-co2e': 0,
       minWatts: 27.110761399585716,
@@ -5988,7 +5988,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_2S_V5]: {
       size: 'E8-2s_v5',
-      vCPU: 2,
+      vCPU: 8,
       memory: 64,
       'embodied-co2e': 0,
       minWatts: 1.6944225874741072,
@@ -5998,7 +5998,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E8_4S_V5]: {
       size: 'E8-4s_v5',
-      vCPU: 4,
+      vCPU: 8,
       memory: 64,
       'embodied-co2e': 0,
       minWatts: 3.3888451749482145,
@@ -6018,7 +6018,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E96_24S_V5]: {
       size: 'E96-24s_v5',
-      vCPU: 24,
+      vCPU: 96,
       memory: 672,
       'embodied-co2e': 0,
       minWatts: 20.333071049689288,
@@ -6028,7 +6028,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_E96_48S_V5]: {
       size: 'E96-48s_v5',
-      vCPU: 48,
+      vCPU: 96,
       memory: 672,
       'embodied-co2e': 0,
       minWatts: 40.666142099378575,
@@ -7810,9 +7810,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_GS4_4]: {
       size: 'GS4-4',
-      vCPU: 4,
+      vCPU: 16,
       memory: 224,
-      'embodied-co2e': 179.83875,
+      'embodied-co2e': 719.355,
       minWatts: 3.3888451749482145,
       maxWatts: 14.773076320760033,
       co2eEmpty: false,
@@ -7820,9 +7820,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_GS4_8]: {
       size: 'GS4-8',
-      vCPU: 8,
+      vCPU: 16,
       memory: 224,
-      'embodied-co2e': 359.6775,
+      'embodied-co2e': 719.355,
       minWatts: 6.777690349896429,
       maxWatts: 29.546152641520067,
       co2eEmpty: false,
@@ -7840,9 +7840,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_GS5_16]: {
       size: 'GS5-16',
-      vCPU: 16,
+      vCPU: 32,
       memory: 448,
-      'embodied-co2e': 874.81,
+      'embodied-co2e': 1749.62,
       minWatts: 13.555380699792858,
       maxWatts: 59.09230528304013,
       co2eEmpty: false,
@@ -7850,9 +7850,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_GS5_8]: {
       size: 'GS5-8',
-      vCPU: 8,
+      vCPU: 32,
       memory: 448,
-      'embodied-co2e': 437.405,
+      'embodied-co2e': 1749.62,
       minWatts: 6.777690349896429,
       maxWatts: 29.546152641520067,
       co2eEmpty: false,
@@ -7862,7 +7862,7 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDHBRSV2FAMILY]: {
     [AZURE_VM_ENUM.STANDARD_HB120_16RS_V2]: {
       size: 'HB120-16rs_v2',
-      vCPU: 16,
+      vCPU: 120,
       memory: 456,
       'embodied-co2e': 0,
       minWatts: 13.555380699792858,
@@ -7872,7 +7872,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HB120_32RS_V2]: {
       size: 'HB120-32rs_v2',
-      vCPU: 32,
+      vCPU: 120,
       memory: 456,
       'embodied-co2e': 0,
       minWatts: 27.110761399585716,
@@ -7882,7 +7882,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HB120_64RS_V2]: {
       size: 'HB120-64rs_v2',
-      vCPU: 64,
+      vCPU: 120,
       memory: 456,
       'embodied-co2e': 0,
       minWatts: 54.22152279917143,
@@ -7892,7 +7892,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HB120_96RS_V2]: {
       size: 'HB120-96rs_v2',
-      vCPU: 96,
+      vCPU: 120,
       memory: 456,
       'embodied-co2e': 0,
       minWatts: 81.33228419875715,
@@ -7914,9 +7914,9 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDHBV3FAMILY]: {
     [AZURE_VM_ENUM.STANDARD_HB120_16RS_V3]: {
       size: 'HB120-16rs_v3',
-      vCPU: 16,
+      vCPU: 120,
       memory: 456,
-      'embodied-co2e': 226.61599999999999,
+      'embodied-co2e': 1699.62,
       minWatts: 7.126236979166666,
       maxWatts: 32.309244791666664,
       co2eEmpty: false,
@@ -7924,9 +7924,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HB120_32RS_V3]: {
       size: 'HB120-32rs_v3',
-      vCPU: 32,
+      vCPU: 120,
       memory: 456,
-      'embodied-co2e': 453.23199999999997,
+      'embodied-co2e': 1699.62,
       minWatts: 14.252473958333333,
       maxWatts: 64.61848958333333,
       co2eEmpty: false,
@@ -7934,9 +7934,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HB120_64RS_V3]: {
       size: 'HB120-64rs_v3',
-      vCPU: 64,
+      vCPU: 120,
       memory: 456,
-      'embodied-co2e': 906.4639999999999,
+      'embodied-co2e': 1699.62,
       minWatts: 28.504947916666666,
       maxWatts: 129.23697916666666,
       co2eEmpty: false,
@@ -7944,9 +7944,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HB120_96RS_V3]: {
       size: 'HB120-96rs_v3',
-      vCPU: 96,
+      vCPU: 120,
       memory: 456,
-      'embodied-co2e': 1359.696,
+      'embodied-co2e': 1699.62,
       minWatts: 42.757421875,
       maxWatts: 193.85546875,
       co2eEmpty: false,
@@ -7966,7 +7966,7 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDHBV4FAMILY]: {
     [AZURE_VM_ENUM.STANDARD_HB176_144RS_V4]: {
       size: 'HB176-144rs_v4',
-      vCPU: 144,
+      vCPU: 176,
       memory: 768,
       'embodied-co2e': 0,
       minWatts: 121.99842629813573,
@@ -7976,7 +7976,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HB176_144S_V4]: {
       size: 'HB176-144s_v4',
-      vCPU: 144,
+      vCPU: 176,
       memory: 768,
       'embodied-co2e': 0,
       minWatts: 121.99842629813573,
@@ -7986,7 +7986,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HB176_24RS_V4]: {
       size: 'HB176-24rs_v4',
-      vCPU: 24,
+      vCPU: 176,
       memory: 768,
       'embodied-co2e': 0,
       minWatts: 20.333071049689288,
@@ -7996,7 +7996,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HB176_24S_V4]: {
       size: 'HB176-24s_v4',
-      vCPU: 24,
+      vCPU: 176,
       memory: 768,
       'embodied-co2e': 0,
       minWatts: 20.333071049689288,
@@ -8006,7 +8006,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HB176_48RS_V4]: {
       size: 'HB176-48rs_v4',
-      vCPU: 48,
+      vCPU: 176,
       memory: 768,
       'embodied-co2e': 0,
       minWatts: 40.666142099378575,
@@ -8016,7 +8016,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HB176_48S_V4]: {
       size: 'HB176-48s_v4',
-      vCPU: 48,
+      vCPU: 176,
       memory: 768,
       'embodied-co2e': 0,
       minWatts: 40.666142099378575,
@@ -8026,7 +8026,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HB176_96RS_V4]: {
       size: 'HB176-96rs_v4',
-      vCPU: 96,
+      vCPU: 176,
       memory: 768,
       'embodied-co2e': 0,
       minWatts: 81.33228419875715,
@@ -8036,7 +8036,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HB176_96S_V4]: {
       size: 'HB176-96s_v4',
-      vCPU: 96,
+      vCPU: 176,
       memory: 768,
       'embodied-co2e': 0,
       minWatts: 81.33228419875715,
@@ -8068,7 +8068,7 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDHBSFAMILY]: {
     [AZURE_VM_ENUM.STANDARD_HB60_15RS]: {
       size: 'HB60-15rs',
-      vCPU: 15,
+      vCPU: 60,
       memory: 228,
       'embodied-co2e': 0,
       minWatts: 12.708169406055804,
@@ -8078,7 +8078,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HB60_30RS]: {
       size: 'HB60-30rs',
-      vCPU: 30,
+      vCPU: 60,
       memory: 228,
       'embodied-co2e': 0,
       minWatts: 25.416338812111608,
@@ -8088,7 +8088,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HB60_45RS]: {
       size: 'HB60-45rs',
-      vCPU: 45,
+      vCPU: 60,
       memory: 228,
       'embodied-co2e': 0,
       minWatts: 38.12450821816741,
@@ -8110,7 +8110,7 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDHCSFAMILY]: {
     [AZURE_VM_ENUM.STANDARD_HC44_16RS]: {
       size: 'HC44-16rs',
-      vCPU: 16,
+      vCPU: 44,
       memory: 352,
       'embodied-co2e': 0,
       minWatts: 13.555380699792858,
@@ -8120,7 +8120,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HC44_32RS]: {
       size: 'HC44-32rs',
-      vCPU: 32,
+      vCPU: 44,
       memory: 352,
       'embodied-co2e': 0,
       minWatts: 27.110761399585716,
@@ -8142,7 +8142,7 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDHXFAMILY]: {
     [AZURE_VM_ENUM.STANDARD_HX176_144RS]: {
       size: 'HX176-144rs',
-      vCPU: 144,
+      vCPU: 176,
       memory: 1408,
       'embodied-co2e': 0,
       minWatts: 121.99842629813573,
@@ -8152,7 +8152,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HX176_144S]: {
       size: 'HX176-144s',
-      vCPU: 144,
+      vCPU: 176,
       memory: 1408,
       'embodied-co2e': 0,
       minWatts: 121.99842629813573,
@@ -8162,7 +8162,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HX176_24RS]: {
       size: 'HX176-24rs',
-      vCPU: 24,
+      vCPU: 176,
       memory: 1408,
       'embodied-co2e': 0,
       minWatts: 20.333071049689288,
@@ -8172,7 +8172,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HX176_24S]: {
       size: 'HX176-24s',
-      vCPU: 24,
+      vCPU: 176,
       memory: 1408,
       'embodied-co2e': 0,
       minWatts: 20.333071049689288,
@@ -8182,7 +8182,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HX176_48RS]: {
       size: 'HX176-48rs',
-      vCPU: 48,
+      vCPU: 176,
       memory: 1408,
       'embodied-co2e': 0,
       minWatts: 40.666142099378575,
@@ -8192,7 +8192,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HX176_48S]: {
       size: 'HX176-48s',
-      vCPU: 48,
+      vCPU: 176,
       memory: 1408,
       'embodied-co2e': 0,
       minWatts: 40.666142099378575,
@@ -8202,7 +8202,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HX176_96RS]: {
       size: 'HX176-96rs',
-      vCPU: 96,
+      vCPU: 176,
       memory: 1408,
       'embodied-co2e': 0,
       minWatts: 81.33228419875715,
@@ -8212,7 +8212,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_HX176_96S]: {
       size: 'HX176-96s',
-      vCPU: 96,
+      vCPU: 176,
       memory: 1408,
       'embodied-co2e': 0,
       minWatts: 81.33228419875715,
@@ -8482,9 +8482,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_M128_32MS]: {
       size: 'M128-32ms',
-      vCPU: 32,
+      vCPU: 128,
       memory: 3892,
-      'embodied-co2e': 1600.5675,
+      'embodied-co2e': 6402.27,
       minWatts: 27.110761399585716,
       maxWatts: 118.18461056608027,
       co2eEmpty: false,
@@ -8492,9 +8492,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_M128_64MS]: {
       size: 'M128-64ms',
-      vCPU: 64,
+      vCPU: 128,
       memory: 3892,
-      'embodied-co2e': 3201.135,
+      'embodied-co2e': 6402.27,
       minWatts: 54.22152279917143,
       maxWatts: 236.36922113216053,
       co2eEmpty: false,
@@ -8532,9 +8532,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_M16_4MS]: {
       size: 'M16-4ms',
-      vCPU: 4,
+      vCPU: 16,
       memory: 437,
-      'embodied-co2e': 54.241875,
+      'embodied-co2e': 216.9675,
       minWatts: 3.3888451749482145,
       maxWatts: 14.773076320760033,
       co2eEmpty: false,
@@ -8542,9 +8542,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_M16_8MS]: {
       size: 'M16-8ms',
-      vCPU: 8,
+      vCPU: 16,
       memory: 437,
-      'embodied-co2e': 108.48375,
+      'embodied-co2e': 216.9675,
       minWatts: 6.777690349896429,
       maxWatts: 29.546152641520067,
       co2eEmpty: false,
@@ -8562,9 +8562,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_M32_16MS]: {
       size: 'M32-16ms',
-      vCPU: 16,
+      vCPU: 32,
       memory: 875,
-      'embodied-co2e': 292.78875,
+      'embodied-co2e': 585.5775,
       minWatts: 13.555380699792858,
       maxWatts: 59.09230528304013,
       co2eEmpty: false,
@@ -8572,9 +8572,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_M32_8MS]: {
       size: 'M32-8ms',
-      vCPU: 8,
+      vCPU: 32,
       memory: 875,
-      'embodied-co2e': 146.394375,
+      'embodied-co2e': 585.5775,
       minWatts: 6.777690349896429,
       maxWatts: 29.546152641520067,
       co2eEmpty: false,
@@ -8622,9 +8622,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_M64_16MS]: {
       size: 'M64-16ms',
-      vCPU: 16,
+      vCPU: 64,
       memory: 1792,
-      'embodied-co2e': 444.60375,
+      'embodied-co2e': 1778.415,
       minWatts: 13.555380699792858,
       maxWatts: 59.09230528304013,
       co2eEmpty: false,
@@ -8632,9 +8632,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_M64_32MS]: {
       size: 'M64-32ms',
-      vCPU: 32,
+      vCPU: 64,
       memory: 1792,
-      'embodied-co2e': 889.2075,
+      'embodied-co2e': 1778.415,
       minWatts: 27.110761399585716,
       maxWatts: 118.18461056608027,
       co2eEmpty: false,
@@ -8682,9 +8682,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_M8_2MS]: {
       size: 'M8-2ms',
-      vCPU: 2,
+      vCPU: 8,
       memory: 218,
-      'embodied-co2e': 22.37140625,
+      'embodied-co2e': 89.485625,
       minWatts: 1.6944225874741072,
       maxWatts: 7.386538160380017,
       co2eEmpty: false,
@@ -8692,9 +8692,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_M8_4MS]: {
       size: 'M8-4ms',
-      vCPU: 4,
+      vCPU: 8,
       memory: 218,
-      'embodied-co2e': 44.7428125,
+      'embodied-co2e': 89.485625,
       minWatts: 3.3888451749482145,
       maxWatts: 14.773076320760033,
       co2eEmpty: false,
@@ -9006,9 +9006,9 @@ export const AZURE_VM = {
   [AZURE_VM_FAMILY_ENUM.STANDARDMSV2FAMILY]: {
     [AZURE_VM_ENUM.STANDARD_M208MS_V2]: {
       size: 'M208ms_v2',
-      vCPU: 0,
+      vCPU: 208,
       memory: 5700,
-      'embodied-co2e': 0,
+      'embodied-co2e': 8475.615,
       minWatts: 0,
       maxWatts: 0,
       co2eEmpty: false,
@@ -9016,9 +9016,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_M208S_V2]: {
       size: 'M208s_v2',
-      vCPU: 0,
+      vCPU: 208,
       memory: 2850,
-      'embodied-co2e': 0,
+      'embodied-co2e': 8475.615,
       minWatts: 0,
       maxWatts: 0,
       co2eEmpty: false,
@@ -9026,7 +9026,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_M416_208MS_V2]: {
       size: 'M416-208ms_v2',
-      vCPU: 208,
+      vCPU: 416,
       memory: 11400,
       'embodied-co2e': 0,
       minWatts: 176.21994909730716,
@@ -9036,7 +9036,7 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_M416_208S_V2]: {
       size: 'M416-208s_v2',
-      vCPU: 208,
+      vCPU: 416,
       memory: 5700,
       'embodied-co2e': 0,
       minWatts: 176.21994909730716,
@@ -9046,9 +9046,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_M416MS_V2]: {
       size: 'M416ms_v2',
-      vCPU: 0,
+      vCPU: 416,
       memory: 11400,
-      'embodied-co2e': 0,
+      'embodied-co2e': 16951.23,
       minWatts: 0,
       maxWatts: 0,
       co2eEmpty: false,
@@ -9066,9 +9066,9 @@ export const AZURE_VM = {
     },
     [AZURE_VM_ENUM.STANDARD_M416S_V2]: {
       size: 'M416s_v2',
-      vCPU: 0,
+      vCPU: 416,
       memory: 5700,
-      'embodied-co2e': 0,
+      'embodied-co2e': 16951.23,
       minWatts: 0,
       maxWatts: 0,
       co2eEmpty: false,

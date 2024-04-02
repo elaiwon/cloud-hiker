@@ -47,6 +47,7 @@
     "lint": "gts lint",
     "prepare": "husky install",
     "prepublish": "npm run build",
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "tools": "npx tsc && node ./build/lib/cloud-hiker/tools/azure/resource-sku.js && node ./build/lib/cloud-hiker/tools/azure/azure-constants.js"
   }
 }

@@ -5,6 +5,72 @@ import {PluginParams} from '../../../types/interface';
 
 let credential: DefaultAzureCredential | null = null;
 
+const addMonths = (timestamp: Date, months: number) => {
+  const date = new Date(timestamp.getTime());
+  const d = date.getUTCDate();
+
+  date.setUTCMonth(date.getUTCMonth() + +months);
+
+  if (date.getUTCDate() !== d) {
+    date.setUTCDate(0);
+  }
+
+  return date;
+};
+
+const addDays = (timestamp: Date, days: number) => {
+  const date = new Date(timestamp.getTime() + days * 24 * 60 * 60 * 1000);
+
+  return date;
+};
+
+const addHours = (timestamp: Date, hours: number) => {
+  const date = new Date(timestamp.getTime() + hours * 60 * 60 * 1000);
+
+  return date;
+};
+
+const addMinutes = (timestamp: Date, minutes: number) => {
+  const date = new Date(timestamp.getTime() + minutes * 60 * 1000);
+
+  return date;
+};
+
+const addSeconds = (timestamp: Date, seconds: number) => {
+  const date = new Date(timestamp.getTime() + seconds * 1000);
+
+  return date;
+};
+
+const convertInteger = (num: string | undefined) => (num ? parseInt(num) : 0);
+
+const getDuration = (timestamp: Date, granularity: string): number => {
+  const match =
+    /P(?!$)((?<years>\d+)Y){0,1}((?<months>\d+)M){0,1}((?<days>\d+)D){0,1}(T((?<hours>\d+)H){0,1}((?<minutes>\d+)M){0,1}((?<seconds>\d+)S){0,1}){0,1}/gm.exec(
+      granularity
+    );
+  const dateYears = addMonths(
+    timestamp,
+    12 * convertInteger(match?.groups?.years)
+  );
+  const dateMonths = addMonths(
+    dateYears,
+    convertInteger(match?.groups?.months)
+  );
+  const dateDays = addDays(dateMonths, convertInteger(match?.groups?.days));
+  const dateHours = addHours(dateDays, convertInteger(match?.groups?.hours));
+  const dateMinutes = addMinutes(
+    dateHours,
+    convertInteger(match?.groups?.minutes)
+  );
+  const dateSeconds = addSeconds(
+    dateMinutes,
+    convertInteger(match?.groups?.seconds)
+  );
+
+  return (dateSeconds.getTime() - timestamp.getTime()) / 3600000;
+};
+
 export const getVirtualMachineList = async (subscriptionId: string) => {
   if (!credential) {
     credential = new DefaultAzureCredential();
@@ -26,8 +92,9 @@ export const getVirtualMachineList = async (subscriptionId: string) => {
 
 export const getVirtualMachineUsage = async (
   resourceId: string,
-  startTime: string,
-  endTime: string
+  startTime: Date,
+  endTime: Date,
+  granularity: string
 ): Promise<PluginParams[]> => {
   if (!credential) {
     credential = new DefaultAzureCredential();
@@ -39,10 +106,10 @@ export const getVirtualMachineUsage = async (
     resourceId,
     ['Percentage CPU'],
     {
-      granularity: 'PT1H',
+      granularity,
       timespan: {
-        startTime: new Date(startTime),
-        endTime: new Date(endTime),
+        startTime: startTime,
+        endTime: endTime,
       },
     }
   );
@@ -50,7 +117,7 @@ export const getVirtualMachineUsage = async (
   const data = response.metrics[0].timeseries[0].data?.map(d => {
     return {
       timestamp: d.timeStamp,
-      duration: 3600,
+      duration: getDuration(d.timeStamp, granularity),
       'cpu/utilization': d.average || 0,
     };
   });
